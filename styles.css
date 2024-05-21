@@ -1,0 +1,133 @@
+/* universal styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--neutral-lightGray);
+    font-family: Poppins;
+    font-size: 0.9375rem;
+}
+
+/* custom properties */
+
+:root {
+
+    /* accent colors*/
+    --primary-red: hsl(0, 78%, 62%);
+    --primary-cyan: hsl(180, 62%, 55%);
+    --primary-orange: hsl(34, 97%, 64%);
+    --primary-blue: hsl(212, 86%, 64%);
+
+    /* neutral colors */
+    --neutral-darkBlue: hsl(234, 12%, 34%);
+    --neutral-grayBlue: hsl(229, 6%, 66%);
+    --neutral-lightGray: hsl(0, 0%, 98%);
+
+    /* font weights */
+    --light: 200;
+    --regular: 400;
+    --bold: 600;
+}
+
+/* text styles */
+
+span {
+    font-weight: var(--light);
+}
+
+h1 {
+    color: var(--neutral-darkBlue);
+    line-height: 2.8rem;
+}
+
+h2 {
+    color: var(--neutral-darkBlue);
+    font-weight: var(--bold);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: var(--neutral-grayBlue);
+    font-weight: var(--light);
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+header p {
+    color: var(--neutral-grayBlue);
+    font-size: 0.95rem;
+    font-weight: var(--regular);
+    margin-top: 2rem;
+}
+
+/* wrapper styles */
+
+.wrapper {
+    display: flex;
+    gap: 1rem;
+    margin-inline: auto;
+    margin-top: 4rem;
+    max-width: 1024px;
+}
+
+.wrapper-narrow {
+    margin-inline: auto;
+    margin-top: 4rem;
+    max-width: 500px;
+    text-align: center;
+}
+
+.column {
+    align-content: center;
+    flex-basis: 320px;
+    margin-inline: auto;
+}
+
+/* card styling */
+
+.card {
+    border-top: solid 0.25rem;
+    border-radius: 0.3rem;
+    background-color: white;
+    padding: 2rem;
+    box-shadow: 0 15px 15px -5px var(--neutral-grayBlue);
+}
+
+img {
+    display: block;
+    margin-left: auto;
+}
+
+.one {
+    border-color: var(--primary-cyan);
+}
+
+.two {
+    border-color: var(--primary-red);
+}
+
+.three {
+    border-color: var(--primary-orange);
+    margin-top: 1.5rem;
+}
+
+.four {
+    border-color: var(--primary-blue);
+}
+
+@media (max-width: 950px) {
+    .wrapper {
+        display: grid;
+        margin-inline: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .column {
+        width: 100%;
+    }
+}
